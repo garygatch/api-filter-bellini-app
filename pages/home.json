@@ -1,0 +1,176 @@
+{
+  "name": "home",
+  "type": "page",
+  "url": "/home",
+  "params": {},
+  "variables": [
+    {
+      "name": "petstore",
+      "type": "open-api",
+      "id": "open-api"
+    },
+    {
+      "name": "ser1",
+      "type": "service",
+      "id": "service"
+    },
+    {
+      "name": "getAvailable",
+      "type": "method",
+      "description": "",
+      "body": "$ctrl.petstore.findPetsByStatus({\n    status: 'available'\n}).then(result => {\n    /* process the result */\n    let x = result.data\n    const res = x.filter(x => x.id <= 10)\n    console.log(res)\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    }
+  ],
+  "children": [
+    {
+      "name": "Badge",
+      "nodeName": "bln-badge",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "core",
+          "value": ""
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": ""
+    },
+    {
+      "name": "Breadcrumbs",
+      "nodeName": "bln-breadcrumbs",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "core",
+          "value": ""
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": ""
+    },
+    {
+      "name": "local",
+      "nodeName": "local",
+      "elementId": "",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": ""
+    },
+    {
+      "name": "global1",
+      "nodeName": "global1",
+      "elementId": "",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": ""
+    },
+    {
+      "name": "global2",
+      "nodeName": "global2",
+      "elementId": "",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "custom-component",
+      "expressions": []
+    },
+    {
+      "name": "Button",
+      "nodeName": "bln-button",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "core",
+          "value": ""
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "core-component",
+      "expressions": [
+        {
+          "expression": "$ctrl.getAvailable()",
+          "to": "onClick"
+        }
+      ]
+    }
+  ]
+}

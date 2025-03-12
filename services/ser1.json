@@ -1,0 +1,44 @@
+{
+  "type": "app-service",
+  "name": "ser1",
+  "description": "",
+  "singleton": true,
+  "variables": [
+    {
+      "name": "log",
+      "type": "method",
+      "description": "",
+      "body": "console.log('a')",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": []
+    },
+    {
+      "name": "prop1",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "prop2",
+      "type": "property",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "a",
+      "type": "array",
+      "description": "",
+      "children": []
+    }
+  ],
+  "visible": [
+    "log",
+    "prop1",
+    "prop2",
+    "a"
+  ]
+}
